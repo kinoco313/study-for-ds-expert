@@ -7,6 +7,7 @@ app = marimo.App(width="medium")
 @app.cell
 def _():
     import marimo as mo
+
     return (mo,)
 
 
@@ -14,6 +15,7 @@ def _():
 def _():
     import numpy as np  # 行列の積などを計算するために使用
     import polars as pl  # 可視化の前処理のために使用。縦持ちデータにするとか
+
     return np, pl
 
 
@@ -182,13 +184,6 @@ def _(Sigma):
     # 分散共分散行列も確認しておく
     print(Sigma)
 
-    # あとでmarkdawn内で用いるために用意
-    var_x1, cov_x1x2, cov_x2x1, var_x2 = (
-        Sigma[0, 0],
-        Sigma[0, 1],
-        Sigma[1, 0],
-        Sigma[1, 1],
-    )
     return
 
 
